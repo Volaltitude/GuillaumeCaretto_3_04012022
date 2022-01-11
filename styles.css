@@ -223,6 +223,7 @@ a {
 .card__logo {
   font-size: 1.75rem;
   font-weight: 100;
+  position: relative;
 }
 
 .footer {
@@ -236,10 +237,8 @@ a {
 }
 
 .footer__img {
-  height: 35%;
-  width: 35%;
-  fill: white;
-  padding-bottom: 1rem;
+  font-family: Shrikhand, sans-serif;
+  font-weight: 300;
 }
 
 .footer__link {
@@ -305,6 +304,14 @@ a {
 
 .part__title {
   font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.part__title--underline {
+  height: 3px;
+  width: 45px;
+  background-color: #99e2d0;
+  margin-bottom: 15px;
 }
 
 .part__card {
@@ -322,12 +329,33 @@ a {
           justify-content: space-between;
 }
 
+.part__card__price {
+  margin-bottom: 0;
+  line-height: 0;
+}
+
+.part__card__check {
+  background-color: green;
+  width: 25%;
+}
+
+.part__card__description {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-right: 1rem;
+}
+
 .part__card__description p {
   margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .part__card__description h3 {
   margin: 0 0 5px 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .btn {

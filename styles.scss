@@ -160,6 +160,10 @@ a {
     &__logo {
         font-size: 1.75rem;
         font-weight: 100;
+        position: relative;
+        &--after {
+            
+        }
     }
 }
 
@@ -169,10 +173,8 @@ a {
     color: white;
     padding: 1.5rem 1rem;
     &__img {
-        height: 35%;
-        width: 35%;
-        fill: white;
-        padding-bottom: 1rem;
+        font-family: Shrikhand, sans-serif;
+        font-weight: 300;
     }
     &__link {
         padding: .5rem .75rem;
@@ -220,6 +222,13 @@ a {
     flex-direction: column;
     &__title {
         font-weight: 400;
+        margin-bottom: 5px;
+        &--underline {
+            height: 3px;
+            width: 45px;
+            background-color: #99e2d0;
+            margin-bottom: 15px;
+        }
     }
     &__card {
         background-color: white;
@@ -229,12 +238,28 @@ a {
         margin-bottom: 1rem;
         align-items: center;
         justify-content: space-between;
+        &__price {
+            margin-bottom: 0;
+            line-height: 0;
+        }
+        &__check {
+           background-color: green; 
+           width: 25%;
+        }
         &__description {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            padding-right: 1rem;
             p {
                 margin: 0;
+                text-overflow: ellipsis;
+                overflow: hidden;
             }
             h3{
                 margin: 0 0 5px 0;
+                text-overflow: ellipsis;
+                overflow: hidden;
             }
         }
     }
