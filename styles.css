@@ -300,6 +300,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: hidden;
 }
 
 .part__title {
@@ -312,6 +313,13 @@ a {
   width: 45px;
   background-color: #99e2d0;
   margin-bottom: 15px;
+}
+
+.part__list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .part__card {
@@ -327,6 +335,14 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
+}
+
+.part__card:hover .part__card__check {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: rotate 0.5s ease-in-out;
+  transition: rotate 0.5s ease-in-out;
 }
 
 .part__card__price {
@@ -335,8 +351,35 @@ a {
 }
 
 .part__card__check {
-  background-color: green;
-  width: 25%;
+  position: absolute;
+  background-color: #99E2D0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 65px;
+  -webkit-transform-origin: right 50%;
+          transform-origin: right 50%;
+  border-radius: 0px 1rem 1rem 0px;
+  -webkit-transform: translateX(65px);
+          transform: translateX(65px);
+  overflow: hidden;
+  -webkit-transition: all 700ms;
+  transition: all 700ms;
+}
+
+.part__card__check i {
+  position: absolute;
+  left: 20px;
+  top: 25px;
+  font-size: 1.5rem;
+  color: white;
+  opacity: 1;
+  -webkit-transform: rotate(359deg);
+          transform: rotate(359deg);
+  -webkit-transition: -webkit-transform 700ms;
+  transition: -webkit-transform 700ms;
+  transition: transform 700ms;
+  transition: transform 700ms, -webkit-transform 700ms;
 }
 
 .part__card__description {
@@ -350,6 +393,10 @@ a {
   margin: 0;
   text-overflow: ellipsis;
   overflow: hidden;
+  -webkit-transform-origin: left 50%;
+          transform-origin: left 50%;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 .part__card__description h3 {

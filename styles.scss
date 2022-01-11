@@ -123,9 +123,6 @@ a {
     flex-direction: column;
     background-color: #f6f6f6;
     padding-bottom: 4rem;
-    &__title {
-
-    }
 }
 
 .card {
@@ -161,9 +158,6 @@ a {
         font-size: 1.75rem;
         font-weight: 100;
         position: relative;
-        &--after {
-            
-        }
     }
 }
 
@@ -220,6 +214,7 @@ a {
 
 .part {
     flex-direction: column;
+    overflow: hidden;
     &__title {
         font-weight: 400;
         margin-bottom: 5px;
@@ -230,6 +225,9 @@ a {
             margin-bottom: 15px;
         }
     }
+    &__list {
+        flex-direction: column;
+    }
     &__card {
         background-color: white;
         border-radius: 1rem;
@@ -238,13 +236,40 @@ a {
         margin-bottom: 1rem;
         align-items: center;
         justify-content: space-between;
+        position: relative;
+        &:hover {
+             .part__card__check{
+                transform: rotate(360deg);
+                transition: rotate 0.5s ease-in-out;
+            }
+        }
         &__price {
             margin-bottom: 0;
             line-height: 0;
         }
         &__check {
-           background-color: green; 
-           width: 25%;
+            position: absolute;
+            background-color: #99E2D0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 65px;
+            transform-origin: right 50%;
+            border-radius: 0px 1rem 1rem 0px;
+            transform: translateX(65px);
+            overflow: hidden;
+            transition: all 700ms;
+            i {
+                position: absolute;
+                left: 20px;
+                top: 25px;
+                font-size: 1.5rem;
+                color: white;
+                opacity: 1;
+                transform: rotate(359deg);
+                transition: transform 700ms;
+            }
+
         }
         &__description {
             white-space: nowrap;
@@ -255,6 +280,8 @@ a {
                 margin: 0;
                 text-overflow: ellipsis;
                 overflow: hidden;
+                transform-origin: left 50%;
+                transition-duration: 0.5s;
             }
             h3{
                 margin: 0 0 5px 0;
