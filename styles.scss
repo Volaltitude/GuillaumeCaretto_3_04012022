@@ -212,6 +212,21 @@ a {
     }
 }
 
+@keyframes text-appear {
+    0% {
+        transform: opacity(0);
+    }
+    100% {
+        transform: opacity(1);
+    }
+}
+
+@for $i from 1 through 12 {
+    .delay#{$i} {
+        animation-delay: #{$i * 0.1}s;
+    }
+}
+
 .part {
     flex-direction: column;
     overflow: hidden;
@@ -237,10 +252,14 @@ a {
         align-items: center;
         justify-content: space-between;
         position: relative;
+        transform: scale(1);
+        animation: text-appear 1s forwards;
         &:hover {
              .part__card__check{
+                transform: translateX(-65px);
+            }
+            i {
                 transform: rotate(360deg);
-                transition: rotate 0.5s ease-in-out;
             }
         }
         &__price {
@@ -252,11 +271,10 @@ a {
             background-color: #99E2D0;
             top: 0;
             bottom: 0;
-            right: 0;
+            right: -65px;
             width: 65px;
             transform-origin: right 50%;
             border-radius: 0px 1rem 1rem 0px;
-            transform: translateX(65px);
             overflow: hidden;
             transition: all 700ms;
             i {
@@ -266,7 +284,6 @@ a {
                 font-size: 1.5rem;
                 color: white;
                 opacity: 1;
-                transform: rotate(359deg);
                 transition: transform 700ms;
             }
 
