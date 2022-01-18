@@ -8,6 +8,7 @@
 
 body {
   font-family: Roboto, sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -529,5 +530,115 @@ a {
 .delay12 {
   -webkit-animation-delay: 2.4s;
           animation-delay: 2.4s;
+}
+
+.spinner {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: loader 0.01s;
+          animation: loader 0.01s;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.spinner__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 8rem;
+  height: 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.spinner__item {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 1rem;
+}
+
+.spinner__item--1 {
+  background-color: #9356dc;
+  -webkit-animation: fade .75s ease-in-out 5 both;
+          animation: fade .75s ease-in-out 5 both;
+}
+
+.spinner__item--2 {
+  background-color: #ff79da;
+  -webkit-animation: fade .75s ease-in-out 0.25s 5 both;
+          animation: fade .75s ease-in-out 0.25s 5 both;
+}
+
+.spinner__item--3 {
+  background-color: #99E2D0;
+  -webkit-animation: fade .75s ease-in-out .5s 5 both;
+          animation: fade .75s ease-in-out .5s 5 both;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0.35;
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0.35;
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.35;
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0.35;
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+}
+
+@-webkit-keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
