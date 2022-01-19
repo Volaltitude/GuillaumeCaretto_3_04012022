@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+@mixin tablette {
+    @media (min-width: 768px) and (max-width: 1080px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1080px) {
+        @content;
+    }
+}
+
 .flex {
     display: flex;
 }
@@ -80,11 +93,23 @@ a {
     padding: 1rem;
     &__title {
         font-size: x-large;
+        @include tablette {
+            text-align: center;
+        }
     }
     &__list {
         list-style: none;
         counter-reset: count_list;
         padding-left: 1rem;
+        @include desktop {
+            display: flex;
+        }
+        @include tablette {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
     &__description{
         padding: 1.5rem;
@@ -95,6 +120,14 @@ a {
         display: flex;
         position: relative;
         font-weight: 600;
+        @include desktop {
+            flex-grow: 1;
+            margin-right: 1rem;
+        }
+        @include tablette {
+            width: 25rem;
+            justify-content: center;
+        }
         &:hover {
             background-color: lighten($color: #9356dc, $amount: 35%);
             i {
@@ -128,9 +161,23 @@ a {
 
 .restaurant {
     padding: 1rem;
-    flex-direction: column;
     background-color: #f6f6f6;
+    flex-direction: column;
     padding-bottom: 4rem;
+    &__cards {
+        flex-direction: column;
+        @include tablette {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            column-gap: 2rem;
+            row-gap: 2rem;
+        }
+        @include desktop {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            column-gap: 2rem;
+        }
+    }
 }
 
 .card {
@@ -220,6 +267,7 @@ a {
     &__title {
         justify-content: space-between;
         align-items: center;
+        padding-left: .5rem;
         i {
             font-size: 2rem;
             margin-right: 2rem;
@@ -270,6 +318,12 @@ a {
             margin-left: .8rem;
         }
     }
+    &__items {
+        @include desktop {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
     &__list {
         flex-direction: column;
     }
@@ -285,6 +339,9 @@ a {
         animation: text-appear 0.7s ease-out forwards;
         transform: scale(0);
         cursor: pointer;
+        @include desktop {
+
+        }
         &:hover {
              .part__card__check{
                 transform: translateX(0px);
