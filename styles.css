@@ -132,6 +132,14 @@ a {
   font-weight: 600;
 }
 
+.tuto__description:hover {
+  background-color: #f2eafb;
+}
+
+.tuto__description:hover i {
+  color: #9356dc;
+}
+
 .tuto__description::before {
   counter-increment: count_list 1;
   content: counter(count_list) "";
@@ -180,12 +188,25 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
   height: 250px;
   background-color: #fff;
   margin: 0.5rem 0;
   border-radius: 1rem;
   -webkit-box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
           box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+
+.card__new {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #99E2D0;
+  color: #278870;
+  font-size: small;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.1rem;
+  font-weight: 500;
 }
 
 .card__img {

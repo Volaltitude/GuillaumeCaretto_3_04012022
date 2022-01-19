@@ -95,6 +95,12 @@ a {
         display: flex;
         position: relative;
         font-weight: 600;
+        &:hover {
+            background-color: lighten($color: #9356dc, $amount: 35%);
+            i {
+                color: #9356dc;
+            }
+        }
         &::before {
             counter-increment: count_list 1;
             content: counter(count_list) "";
@@ -130,11 +136,23 @@ a {
 .card {
     flex-direction: column;
     justify-content: center;
+    position: relative;
     height: 250px;
     background-color: #fff;
     margin: 0.5rem 0;
     border-radius: 1rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+    &__new {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: #99E2D0;
+        color: darken($color: #99E2D0, $amount: 40%);
+        font-size: small;
+        padding: 0.4rem 0.6rem;
+        border-radius: 0.1rem;
+        font-weight: 500;
+    }
     &__img {
         object-fit: cover;
         height: 70%;
