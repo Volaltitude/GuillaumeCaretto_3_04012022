@@ -338,15 +338,10 @@ a {
         align-items: center;
         justify-content: space-between;
         position: relative;
-        animation: text-appear 0.7s ease-out forwards;
-        transform: scale(0);
+        animation: text-appear 0.7s ease-out both;
         cursor: pointer;
-        @include desktop {
-
-        }
         &:hover {
              .part__card__check{
-                transform: translateX(0px);
                 flex: 30%;
             }
             i {

@@ -496,16 +496,12 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  -webkit-animation: text-appear 0.7s ease-out forwards;
-          animation: text-appear 0.7s ease-out forwards;
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  -webkit-animation: text-appear 0.7s ease-out both;
+          animation: text-appear 0.7s ease-out both;
   cursor: pointer;
 }
 
 .part__card:hover .part__card__check {
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
   -webkit-box-flex: 30%;
       -ms-flex: 30%;
           flex: 30%;
