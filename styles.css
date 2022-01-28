@@ -103,6 +103,18 @@ a {
   margin-bottom: -3rem;
 }
 
+.button__size2 {
+  height: 3rem;
+  width: 14rem;
+  margin-top: 1rem;
+}
+
+.button:hover {
+  background: linear-gradient(-15deg, rgba(147, 86, 220, 0.7), rgba(255, 121, 218, 0.7));
+  -webkit-box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.5);
+}
+
 .tuto {
   padding: 1rem;
 }
@@ -663,8 +675,8 @@ a {
           justify-content: center;
   -webkit-animation: loader 0.01s;
           animation: loader 0.01s;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -688,20 +700,20 @@ a {
 
 .spinner__item--1 {
   background-color: #9356dc;
-  -webkit-animation: fade .75s ease-in-out 5 both;
-          animation: fade .75s ease-in-out 5 both;
+  -webkit-animation: fade .75s ease-in-out 4 both;
+          animation: fade .75s ease-in-out 4 both;
 }
 
 .spinner__item--2 {
   background-color: #ff79da;
-  -webkit-animation: fade .75s ease-in-out 0.25s 5 both;
-          animation: fade .75s ease-in-out 0.25s 5 both;
+  -webkit-animation: fade .75s ease-in-out 0.25s 4 both;
+          animation: fade .75s ease-in-out 0.25s 4 both;
 }
 
 .spinner__item--3 {
   background-color: #99E2D0;
-  -webkit-animation: fade .75s ease-in-out .5s 5 both;
-          animation: fade .75s ease-in-out .5s 5 both;
+  -webkit-animation: fade .75s ease-in-out .5s 4 both;
+          animation: fade .75s ease-in-out .5s 4 both;
 }
 
 @-webkit-keyframes fade {
